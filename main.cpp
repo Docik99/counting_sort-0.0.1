@@ -16,9 +16,9 @@ bool read(int *mas, int n) {
 }
 
 void sort(int *mas,int *dub,  int n){
-    int sortmas[256] = {0}, i;
-    for (i = 0; i < n; i++) dub[i] = i;
-    for (i = 0; i < n; i++) sortmas[mas[i]]++;
+    int sortmas[256] = {0};
+    for (int i = 0; i < n; i++) dub[i] = i;
+    for (int i = 0; i < n; i++) sortmas[mas[i]]++;
     for (int j = 1; j < 256; j++) 	sortmas[j] += sortmas[j - 1];
     n--;
     while(n >= 0){
